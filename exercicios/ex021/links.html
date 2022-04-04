@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+        O que aprendi nesse Arquivo:
+        1. classes são definidas no css por .
+        2. ids são definidos no css por #
+        3. pseudoclasses em css são definidas por :: (content       adiciona coisas no conteúdo HTML ex: símbolos como ⇒)
+        4. > serve para indicar uma tag dentro de uma div
+        5. a::active -> ao clicar no link acontece a cascata
+        6. a::after ->  depois do link
+        7. a::before -> antes do link
+        */
+        body { 
+            font-family: sans-serif;
+        }
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited {
+            color: darkred;
+            text-decoration: none;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+        a:active {
+            color: yellow;
+        }
+        .setinha {
+            background-color: rgba(240, 142, 142, 0.582);
+            padding: 1px;
+
+        }
+        
+        .setinha::after {
+         content: ' ⇐';
+        }
+        .setinha::before {
+            content: '⇒ ';
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/gustavoguanabara">Repositório GitHub</a></li>
+        <li><a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" class="setinha">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" class="setinha">Site do Curso em Video</a></li>
+    </ul>
+    
+</body>
+</html>
